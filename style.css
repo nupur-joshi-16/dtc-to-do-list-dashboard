@@ -14,12 +14,14 @@ body {
     font-size: 1.6rem;
     font-family: "Exo", sans-serif;
     background: #fff;
-    display: flex;
+    /* display: flex; */
 }
 
 .content {
-    width: 100%;
-    height: auto;
+    margin-left: 39.6rem;
+    /* 9 + 30.6 */
+    min-height: 100vh;
+    /* padding: 2rem; */
 }
 
 .header {
@@ -30,6 +32,7 @@ body {
     align-items: center;
     justify-content: space-between;
     /* border-bottom: 1px solid rgba(28, 29, 34, 0.08); */
+    /* background-color: bisque; */
 }
 
 .header__cta {
@@ -161,9 +164,17 @@ a {
 
 /* MAIN */
 main {
+
+    width: 100%;
+    /* height: auto; */
+    padding: 0 3.2rem;
     display: flex;
     gap: 2.4rem;
-    padding: 3.2rem;
+    /* padding: 3.2rem; */
+    /* margin: 3.2rem; */
+    /* background-color: aquamarine; */
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
 }
 
 .main__to-do,
@@ -172,9 +183,10 @@ main {
     border: 2px dashed rgba(28, 29, 34, 0.08);
     border-spacing: 6px;
     border-radius: 16px;
-    height: 100vh;
+    /* height: auto; */
     flex-grow: 1;
-    min-width: 33.33%;
+    /* min-width: 33.33%; */
+    /* background-color: bisque; */
 }
 
 .main__task-card {
@@ -183,6 +195,9 @@ main {
     margin: 1.6rem;
     border: 1px solid rgba(28, 29, 34, 0.06);
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .main__task-title>h2 {
@@ -199,8 +214,13 @@ main {
 
 .side-panel {
     width: 30.6rem;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
     box-shadow: 40px 180px 80px 0 rgba(28, 29, 34, 0.06);
+    position: fixed;
+    top: 0;
+    left: 9rem;
+    z-index: 1000;
 }
 
 .aside {
@@ -214,8 +234,10 @@ main {
     align-items: center;
     padding-top: 2.4rem;
     padding-bottom: 4rem;
-
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .aside__top {
@@ -247,4 +269,102 @@ main {
 
 .aside__nav-list--active {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.6rem;
+}
+
+.main__task-actions {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(28, 29, 34, 0.08);
+}
+
+.main__task-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.main__task-progress-title-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
+
+.main__task-progress-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: grey;
+    height: 0.4rem;
+    border-radius: 0.4rem;
+    margin: 1rem 0;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+
+.numbers__value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+
+.attachments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+
+.task-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(136, 141, 167, 0.1);
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    padding: 0 1.6rem;
 }
